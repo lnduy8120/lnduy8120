@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { TerminalWindow, CodeKeyword, CodeClass, CodeFunction, CodeString, Icon } from '../components/Common';
+import data from '../data';
 
 const Home = () => {
   return (
@@ -14,12 +15,12 @@ const Home = () => {
           <div className="flex flex-col gap-6 text-left">
             <div className="inline-flex items-center rounded-full border border-primary/30 bg-primary/10 px-3 py-1 text-sm font-medium text-primary w-fit">
               <span className="flex h-2 w-2 rounded-full bg-primary mr-2 animate-pulse"></span>
-              Open to Work
+              {data.profile.status}
             </div>
             
             <div className="space-y-4">
               <h1 className="text-4xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl text-slate-900 dark:text-white">
-                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400">[Name]</span>.
+                Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-emerald-400">{data.profile.name}</span>.
               </h1>
               
               <div className="font-mono text-lg sm:text-xl text-slate-600 dark:text-slate-300 bg-background-dark-accent/50 p-4 rounded-lg border-l-4 border-primary">
@@ -29,7 +30,7 @@ const Home = () => {
               </div>
               
               <p className="max-w-xl text-lg text-slate-600 dark:text-slate-400 leading-relaxed">
-                A Senior Java Developer & Backend Architect specializing in crafting high-performance, scalable applications using Spring Boot, Microservices, and Cloud Native technologies.
+                {data.profile.intro}
               </p>
             </div>
             
@@ -65,7 +66,7 @@ const Home = () => {
                 
                 <div className="ml-4 mt-2"><CodeKeyword>public static void</CodeKeyword> <CodeFunction>main</CodeFunction>(String[] args) {'{'}</div>
                 <div className="ml-8 text-slate-400">// Initialize the developer profile</div>
-                <div className="ml-8"><CodeClass>Developer</CodeClass> dev = <CodeKeyword>new</CodeKeyword> <CodeClass>Developer</CodeClass>(<CodeString>"[Name]"</CodeString>);</div>
+                <div className="ml-8"><CodeClass>Developer</CodeClass> dev = <CodeKeyword>new</CodeKeyword> <CodeClass>Developer</CodeClass>(<CodeString>"{data.profile.name}"</CodeString>);</div>
                 <div className="ml-8">dev.setSkills(<CodeString>"Java"</CodeString>, <CodeString>"Spring Boot"</CodeString>, <CodeString>"AWS"</CodeString>);</div>
                 <div className="ml-8">dev.setStatus(<CodeString>"READY_TO_BUILD"</CodeString>);</div>
                 

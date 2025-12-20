@@ -1,37 +1,9 @@
 import React, { useState } from 'react';
 import { SectionTitle, Icon } from '../components/Common';
 import { Project } from '../types';
+import data from '../data';
 
-const projectsData: Project[] = [
-  {
-    id: 1,
-    title: "E-Commerce Microservices",
-    category: "Microservices",
-    description: "A scalable backend architecture handling high-concurrency order processing. Implements circuit breaker patterns, distributed tracing, and event-driven communication.",
-    techStack: ["Spring Cloud", "Docker", "K8s", "Kafka"],
-    imageUrl: "https://picsum.photos/seed/p1/800/600",
-    repoUrl: "#",
-    demoUrl: "#"
-  },
-  {
-    id: 2,
-    title: "Inventory System",
-    category: "JavaFX",
-    description: "Desktop application for real-time stock management. Features reactive UI updates and complex reporting queries.",
-    techStack: ["JavaFX", "PostgreSQL", "Hibernate"],
-    imageUrl: "https://picsum.photos/seed/p2/800/600",
-    repoUrl: "#"
-  },
-  {
-    id: 3,
-    title: "Auto-Doc Maven Plugin",
-    category: "All", // Utility
-    description: "A build tool extension that automatically generates API documentation based on code annotations during the build lifecycle.",
-    techStack: ["Maven API", "Java Core"],
-    imageUrl: "https://picsum.photos/seed/p3/800/600",
-    repoUrl: "#"
-  }
-];
+const projectsData: Project[] = data.projects as Project[];
 
 const Projects = () => {
   const [filter, setFilter] = useState('All');

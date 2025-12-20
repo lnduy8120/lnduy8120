@@ -1,5 +1,6 @@
 import React from 'react';
 import { SectionTitle, Icon, CodeKeyword, CodeFunction, CodeString, CodeComment, CodeVariable } from '../components/Common';
+import data from '../data';
 
 const Contact = () => {
   return (
@@ -25,11 +26,11 @@ const Contact = () => {
              <div className="p-6 text-gray-300 overflow-x-auto">
                 <div className="flex">
                    <span className="text-gray-600 select-none text-right pr-4 w-8">1</span>
-                   <div><CodeKeyword>private final</CodeKeyword> <CodeFunction>String</CodeFunction> email = <CodeString>"dev@java-portfolio.com"</CodeString>;</div>
+                   <div><CodeKeyword>private final</CodeKeyword> <CodeFunction>String</CodeFunction> email = <CodeString>"{data.contact.email}"</CodeString>;</div>
                 </div>
                 <div className="flex">
                    <span className="text-gray-600 select-none text-right pr-4 w-8">2</span>
-                   <div><CodeKeyword>private final</CodeKeyword> <CodeFunction>String</CodeFunction> location = <CodeString>"Remote / Worldwide"</CodeString>;</div>
+                   <div><CodeKeyword>private final</CodeKeyword> <CodeFunction>String</CodeFunction> location = <CodeString>"{data.contact.location}"</CodeString>;</div>
                 </div>
                 <div className="flex"><span className="text-gray-600 select-none text-right pr-4 w-8">3</span><div>&nbsp;</div></div>
                 <div className="flex">
@@ -54,11 +55,7 @@ const Contact = () => {
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-             {[
-               { name: 'GitHub', handle: '@dev_user', icon: 'code', href: '#' },
-               { name: 'LinkedIn', handle: '/in/dev_user', icon: 'work', href: '#' },
-               { name: 'Twitter', handle: '@dev_tweets', icon: 'alternate_email', href: '#' }
-             ].map(social => (
+             {data.contact.social.map(social => (
                 <a key={social.name} href={social.href} className="group flex items-center justify-center gap-3 bg-[#1e1e1e] border border-[#333] hover:border-primary p-4 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(19,236,91,0.15)]">
                    <Icon name={social.icon} className="text-white group-hover:text-primary transition-colors" />
                    <div className="flex flex-col">

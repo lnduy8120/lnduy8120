@@ -1,5 +1,6 @@
 import React from 'react';
 import { SectionTitle, TerminalWindow, CodeKeyword, CodeClass, CodeFunction, CodeString, CodeComment, Icon } from '../components/Common';
+import data from '../data';
 
 const About = () => {
   return (
@@ -15,7 +16,7 @@ const About = () => {
               <div className="h-8 bg-[#1c2128] border-b border-[#30363d] flex items-center px-4 gap-2">
                 <div className="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
                 <div className="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
-                <div className="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+                <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 <span className="ml-2 text-xs text-gray-400 font-mono">profile_pic.png</span>
               </div>
               <div className="flex-1 bg-cover bg-center" style={{ backgroundImage: 'url("https://picsum.photos/800/800?grayscale")' }}>
@@ -29,18 +30,17 @@ const About = () => {
               <Icon name="person" className="text-primary" />
               Who I Am
             </h3>
-            <p className="text-gray-300 leading-relaxed text-base font-light">
-              I'm a backend specialist who views code as a craft. With over 5 years of experience in the JVM ecosystem, I build scalable, resilient architectures that power high-traffic applications.
-            </p>
-            <p className="text-gray-300 leading-relaxed text-base font-light">
-              When I'm not optimizing SQL queries or refactoring legacy code, you can find me contributing to open-source projects or brewing the perfect pour-over coffee.
-            </p>
+            {data.about.bio.map((paragraph, index) => (
+              <p key={index} className="text-gray-300 leading-relaxed text-base font-light">
+                {paragraph}
+              </p>
+            ))}
             <div className="flex flex-wrap gap-3 mt-2">
               <span className="px-3 py-1 bg-[#1c3325] text-[#13ec5b] rounded text-sm font-mono border border-[#23482f] flex items-center gap-1">
-                <Icon name="location_on" className="text-[14px]" /> San Francisco, CA
+                <Icon name="location_on" className="text-[14px]" /> {data.profile.location}
               </span>
               <span className="px-3 py-1 bg-[#1c3325] text-[#13ec5b] rounded text-sm font-mono border border-[#23482f] flex items-center gap-1">
-                <Icon name="translate" className="text-[14px]" /> English, Spanish
+                <Icon name="translate" className="text-[14px]" /> {data.profile.languages}
               </span>
             </div>
           </div>
@@ -72,11 +72,7 @@ const About = () => {
 
           {/* Stats Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-             {[
-               { icon: 'calendar_month', label: 'Years_Exp', value: '05+' },
-               { icon: 'commit', label: 'Commits_Year', value: '1,240' },
-               { icon: 'local_cafe', label: 'Coffee_Liters', value: '850' }
-             ].map((stat, idx) => (
+             {data.about.stats.map((stat, idx) => (
                 <div key={idx} className="flex flex-col gap-1 rounded-lg p-5 bg-[#112217] border border-[#23482f] relative overflow-hidden group hover:border-primary transition-colors">
                   <div className="absolute top-0 right-0 p-2 opacity-20 group-hover:opacity-40 transition-opacity">
                     <Icon name={stat.icon} className="text-4xl" />
@@ -94,11 +90,7 @@ const About = () => {
               Git Log (History)
             </h3>
             <div className="relative pl-8 border-l border-[#23482f] space-y-8">
-              {[
-                { period: '2020 - Present', role: 'Senior Java Developer', company: '@ TechCorp Solutions', desc: 'Leading a team of 5 developers in re-architecting a monolithic legacy system into microservices using Spring Boot and Kafka. Improved system throughput by 40%.' },
-                { period: '2018 - 2020', role: 'Backend Engineer', company: '@ StartupX Inc.', desc: 'Developed and maintained RESTful APIs for a fintech application. Implemented CI/CD pipelines using Jenkins and Docker, reducing deployment time by 50%.' },
-                { period: '2016 - 2018', role: 'Junior Developer', company: '@ WebSystems Ltd.', desc: 'Assisted in full-stack development using Java EE and Angular. Wrote comprehensive unit tests achieving 90% code coverage.' }
-              ].map((job, idx) => (
+              {data.about.history.map((job, idx) => (
                 <div key={idx} className="relative group">
                   <div className={`absolute -left-[39px] bg-[#102216] border-2 ${idx === 0 ? 'border-primary' : 'border-[#23482f] group-hover:border-primary'} transition-colors rounded-full p-1`}>
                     <div className={`w-3 h-3 ${idx === 0 ? 'bg-primary' : 'bg-[#23482f] group-hover:bg-primary'} transition-colors rounded-full`}></div>

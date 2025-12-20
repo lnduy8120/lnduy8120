@@ -1,5 +1,6 @@
 import React from 'react';
 import { SectionTitle, TerminalWindow, Icon, CodeKeyword } from '../components/Common';
+import data from '../data';
 
 const Skills = () => {
   return (
@@ -47,11 +48,7 @@ const Skills = () => {
                    <Icon name="memory" className="text-primary" /> Core_Proficiency
                 </h3>
                 <div className="space-y-6">
-                   {[
-                     { name: 'Java (Core & Advanced)', level: 95, desc: 'JVM Internals, Stream API, Concurrency, Reflection' },
-                     { name: 'Spring Ecosystem', level: 90, desc: 'Boot, Security, Data JPA, Cloud, WebFlux' },
-                     { name: 'Microservices & Architecture', level: 85, desc: 'Distributed Systems, Event-Driven, REST/gRPC' }
-                   ].map(skill => (
+                   {data.skills.core.map(skill => (
                       <div key={skill.name} className="group rounded-xl bg-[#162c20] border border-[#23482f] p-5 hover:border-primary/50 transition-all hover:shadow-[0_0_10px_rgba(19,236,91,0.2)]">
                          <div className="flex justify-between items-end mb-2">
                             <span className="text-white font-bold text-lg">{skill.name}</span>
@@ -72,12 +69,7 @@ const Skills = () => {
                    <Icon name="database" className="text-primary" /> Data_Persistence
                 </h3>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                   {[
-                     { name: 'PostgreSQL', level: 'Expert', desc: 'Complex queries, Indexing, PL/pgSQL' },
-                     { name: 'MongoDB', level: 'Advanced', desc: 'Aggregation, Sharding, Replica Sets' },
-                     { name: 'Redis', level: 'Intermediate', desc: 'Caching strategies, Pub/Sub' },
-                     { name: 'Elasticsearch', level: 'Intermediate', desc: 'Full-text search, Analytics' }
-                   ].map(db => (
+                   {data.skills.persistence.map(db => (
                       <div key={db.name} className="p-4 rounded-lg bg-[#162c20] border border-[#23482f] flex flex-col gap-2">
                          <div className="flex items-center justify-between">
                             <span className="text-white font-semibold">{db.name}</span>
@@ -100,7 +92,7 @@ const Skills = () => {
                 <div className="rounded-xl border border-[#23482f] bg-[#0a140d] p-6 relative overflow-hidden">
                    <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'linear-gradient(#13ec5b 1px, transparent 1px), linear-gradient(90deg, #13ec5b 1px, transparent 1px)', backgroundSize: '20px 20px' }}></div>
                    <div className="relative z-10 flex flex-wrap gap-3">
-                      {['Docker', 'Kubernetes', 'Jenkins', 'Git & GitHub', 'AWS Core', 'Bash Scripting', 'Grafana'].map(tool => (
+                      {data.skills.tools.map(tool => (
                          <span key={tool} className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-md border border-[#23482f] bg-[#162c20] text-gray-200 text-sm hover:border-primary hover:text-white transition-colors cursor-default">
                             <Icon name="terminal" className="text-sm text-primary" /> {tool}
                          </span>
@@ -115,12 +107,7 @@ const Skills = () => {
                    <Icon name="library_books" className="text-primary" /> Libs_&_Frameworks
                 </h3>
                 <div className="grid grid-cols-2 gap-4">
-                   {[
-                     { name: 'Quarkus', sub: 'Supersonic Subatomic Java', icon: 'bolt' },
-                     { name: 'Hibernate', sub: 'ORM & JPA Provider', icon: 'dataset' },
-                     { name: 'Apache Kafka', sub: 'Event Streaming', icon: 'api' },
-                     { name: 'JUnit 5', sub: 'Unit & Integration Testing', icon: 'bug_report' }
-                   ].map(lib => (
+                   {data.skills.frameworks.map(lib => (
                       <div key={lib.name} className="rounded-lg bg-[#162c20] p-4 border border-[#23482f] hover:border-primary/30 transition-all group">
                          <div className="mb-2 h-8 w-8 rounded-md bg-white/5 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
                             <Icon name={lib.icon} />
@@ -140,20 +127,17 @@ const Skills = () => {
                       <h4 className="text-primary text-sm font-bold font-mono uppercase tracking-wider">Installing_Updates...</h4>
                    </div>
                    <div className="flex flex-col gap-2">
-                      <div className="flex justify-between text-xs text-gray-400 font-mono">
-                         <span>Rust (Systems Programming)</span>
-                         <span>45%</span>
-                      </div>
-                      <div className="w-full h-1 bg-[#162c20] rounded-full overflow-hidden">
-                         <div className="h-full bg-gray-500 rounded-full" style={{ width: '45%' }}></div>
-                      </div>
-                      <div className="flex justify-between text-xs text-gray-400 font-mono mt-1">
-                         <span>GraphQL Federation</span>
-                         <span>30%</span>
-                      </div>
-                      <div className="w-full h-1 bg-[#162c20] rounded-full overflow-hidden">
-                         <div className="h-full bg-gray-500 rounded-full" style={{ width: '30%' }}></div>
-                      </div>
+                      {data.skills.updates.map((update) => (
+                         <React.Fragment key={update.name}>
+                            <div className="flex justify-between text-xs text-gray-400 font-mono mt-1">
+                               <span>{update.name}</span>
+                               <span>{update.percentage}%</span>
+                            </div>
+                            <div className="w-full h-1 bg-[#162c20] rounded-full overflow-hidden">
+                               <div className="h-full bg-gray-500 rounded-full" style={{ width: `${update.percentage}%` }}></div>
+                            </div>
+                         </React.Fragment>
+                      ))}
                    </div>
                 </div>
              </section>

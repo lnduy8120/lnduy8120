@@ -1,5 +1,6 @@
 import React from 'react';
 import { Icon } from '../components/Common';
+import data from '../data';
 
 const Resume = () => {
   return (
@@ -10,13 +11,13 @@ const Resume = () => {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
           </span>
-          Open for work
+          {data.profile.status}
         </div>
         <h1 className="text-4xl md:text-5xl font-bold text-white mb-4 tracking-tight">
           Grab a copy of <span className="text-primary">{'<my_cv />'}</span>
         </h1>
         <p className="text-gray-400 text-lg md:text-xl font-light font-mono">
-          Detailed experience with Java, Spring Boot, and Microservices architecture ready for your review.
+          Detailed experience with {data.resume.competencies.slice(0, 3).join(', ')} architecture ready for your review.
         </p>
       </div>
 
@@ -50,8 +51,8 @@ const Resume = () => {
                 <div>
                    <div className="flex justify-between items-start mb-4">
                       <div>
-                         <h3 className="text-2xl font-bold text-white mb-1">resume_v2.4.pdf</h3>
-                         <p className="text-sm text-gray-400 font-mono">2.1 MB • Last updated: Oct 2023</p>
+                         <h3 className="text-2xl font-bold text-white mb-1">{data.resume.filename}</h3>
+                         <p className="text-sm text-gray-400 font-mono">{data.resume.size} • Last updated: {data.resume.lastUpdated}</p>
                       </div>
                       <span className="bg-primary/10 text-primary border border-primary/20 text-xs px-2 py-1 rounded font-mono">PDF</span>
                    </div>
@@ -66,7 +67,7 @@ const Resume = () => {
                    <div className="mb-8">
                       <p className="text-xs text-gray-400 uppercase tracking-wider mb-3 font-bold">Core Competencies</p>
                       <div className="flex flex-wrap gap-2">
-                        {['Java', 'Spring Boot', 'SQL', 'AWS'].map((skill, i) => (
+                        {data.resume.competencies.map((skill, i) => (
                           <div key={i} className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-surface-border/50 border border-surface-border text-gray-200 text-xs font-mono hover:border-primary/50 transition-colors cursor-default">
                              <Icon name={skill === 'Java' ? 'coffee' : skill === 'Spring Boot' ? 'bolt' : skill === 'SQL' ? 'database' : 'cloud'} className="text-[16px] text-primary" /> {skill}
                           </div>
