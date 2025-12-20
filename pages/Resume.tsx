@@ -1,4 +1,3 @@
-import React from 'react';
 import { Icon } from '../components/Common';
 import data from '../data';
 

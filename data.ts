@@ -1,6 +1,6 @@
 export const data = {
   "profile": {
-    "name": "Alex Dev",
+    "name": "Duy Le",
     "role": "Java Developer",
     "role_full": "public class JavaDeveloper extends Expert",
     "intro": "A Senior Java Developer & Backend Architect specializing in crafting high-performance, scalable applications using Spring Boot, Microservices, and Cloud Native technologies.",

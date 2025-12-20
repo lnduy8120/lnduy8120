@@ -1,5 +1,5 @@
 import React from 'react';
-import { SectionTitle, TerminalWindow, Icon, CodeKeyword } from '../components/Common';
+import { SectionTitle, Icon } from '../components/Common';
 import data from '../data';
 
 const Skills = () => {

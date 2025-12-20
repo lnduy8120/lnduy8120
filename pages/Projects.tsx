@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { SectionTitle, Icon } from '../components/Common';
 import { Project } from '../types';
 import data from '../data';

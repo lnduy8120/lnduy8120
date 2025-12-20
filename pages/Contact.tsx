@@ -1,5 +1,4 @@
-import React from 'react';
-import { SectionTitle, Icon, CodeKeyword, CodeFunction, CodeString, CodeComment, CodeVariable } from '../components/Common';
+import { Icon, CodeKeyword, CodeFunction, CodeString, CodeComment, CodeVariable } from '../components/Common';
 import data from '../data';
 
 const Contact = () => {

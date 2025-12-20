@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
-import { NavLink, Outlet, useLocation } from 'react-router-dom';
+import { useState } from 'react';
+import { NavLink, Outlet } from 'react-router-dom';
 import { Icon } from './Common';
 
 const Layout = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
@@ -16,7 +15,7 @@ const Layout = () => {
     { path: '/contact', label: 'Contact' },
   ];
 
-  const isActive = (path: string) => location.pathname === path;
+  // const isActive = (path: string) => location.pathname === path;
 
   return (
     <div className="relative flex min-h-screen w-full flex-col overflow-x-hidden bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white">
@@ -120,11 +119,6 @@ const Layout = () => {
                 </a>
               ))}
             </div>
-          </div>
-          <div className="mt-8 border-t border-[#23482f]/30 pt-8 flex justify-center gap-8 text-xs text-slate-500">
-            <a href="#" className="hover:text-primary transition-colors">Privacy Policy</a>
-            <span className="text-primary/40">•</span>
-            <a href="#" className="hover:text-primary transition-colors">Terms of Service</a>
           </div>
         </div>
       </footer>

@@ -1,5 +1,4 @@
-import React from 'react';
-import { SectionTitle, TerminalWindow, CodeKeyword, CodeClass, CodeFunction, CodeString, CodeComment, Icon } from '../components/Common';
+import { SectionTitle, TerminalWindow, CodeKeyword, CodeFunction, CodeString, CodeComment, Icon } from '../components/Common';
 import data from '../data';
 
 const About = () => {
