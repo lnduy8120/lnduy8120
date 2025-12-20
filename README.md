@@ -1,20 +1,45 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Java Developer Portfolio - Alex Dev
 
-# Run and deploy your AI Studio app
+## Profile Overview
+**Role:** Senior Java Developer & Backend Architect  
+**Location:** San Francisco, CA  
+**Status:** Open to Work  
+**Email:** dev@java-portfolio.com
 
-This contains everything you need to run your app locally.
+## About Me
+I'm a backend specialist who views code as a craft. With over 5 years of experience in the JVM ecosystem, I build scalable, resilient architectures that power high-traffic applications. When I'm not optimizing SQL queries or refactoring legacy code, you can find me contributing to open-source projects or brewing the perfect pour-over coffee.
 
-View your app in AI Studio: https://ai.studio/apps/drive/1x9RHaIBpD5HxM0PNhDg1kdoobAoOnLTz
+## Technical Skills
 
-## Run Locally
+### Core Proficiency
+- **Java (17+)**: JVM Internals, Stream API, Concurrency, Reflection
+- **Spring Ecosystem**: Boot, Security, Data JPA, Cloud, WebFlux
+- **Microservices**: Distributed Systems, Event-Driven Architecture, REST/gRPC
 
-**Prerequisites:**  Node.js
+### Data Persistence
+- PostgreSQL (Expert)
+- MongoDB (Advanced)
+- Redis, Elasticsearch
 
+### Infrastructure & DevOps
+- Docker, Kubernetes, Jenkins
+- AWS Core Services
+- Git/GitHub, Bash Scripting, Grafana
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+## Experience Highlights
+- **Senior Java Developer** @ TechCorp Solutions (2020 - Present): Leading microservices migration using Spring Boot & Kafka.
+- **Backend Engineer** @ StartupX Inc. (2018 - 2020): API development & CI/CD implementation.
+- **Junior Developer** @ WebSystems Ltd. (2016 - 2018): Full-stack Java EE development.
+
+## Featured Projects
+1. **E-Commerce Microservices**: Scalable backend with Spring Cloud, Docker, K8s, Kafka.
+2. **Inventory System**: JavaFX desktop app with reactive UI.
+3. **Auto-Doc Maven Plugin**: Build tool for automatic API documentation.
+
+## Contact
+- **GitHub**: [@dev_user](#)
+- **LinkedIn**: [/in/dev_user](#)
+- **Twitter**: [@dev_tweets](#)
+
+---
+*Built with React, Tailwind CSS, and a love for clean code.*
