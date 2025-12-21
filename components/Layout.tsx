@@ -27,7 +27,7 @@ const Layout = () => {
               <Icon name="terminal" />
             </div>
             <h2 className="font-mono text-xl font-bold tracking-tight text-white group-hover:text-primary transition-colors">
-              {'<DevPortfolio />'}
+              {'<Portfolio />'}
             </h2>
           </NavLink>
 
@@ -109,7 +109,7 @@ const Layout = () => {
                 <Icon name="terminal" className="text-[18px]" />
               </div>
               <div className="text-sm text-slate-400">
-                <span className="text-primary">© 2024</span> <span className="font-bold text-slate-200">DevPortfolio</span>. All rights reserved.
+                <span className="text-primary">© 2025</span> <span className="font-bold text-slate-200">Portfolio</span>. All rights reserved.
               </div>
             </div>
             <div className="flex gap-6">

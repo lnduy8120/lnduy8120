@@ -23,8 +23,8 @@ const Home = () => {
               </h1>
               
               <div className="font-mono text-lg sm:text-xl text-slate-600 dark:text-slate-300 bg-background-dark-accent/50 p-4 rounded-lg border-l-4 border-primary">
-                <span className="text-primary">public class</span> <span className="text-yellow-300">JavaDeveloper</span> <span className="text-primary">extends</span> <span className="text-yellow-300">Expert</span> {'{'}<br/>
-                &nbsp;&nbsp;<span className="text-slate-400">// Building scalable backends</span><br/>
+                <span className="text-primary">public class</span> <span className="text-yellow-300">{data.profile.role_class}</span> <span className="text-primary">extends</span> <span className="text-yellow-300">{data.profile.role_parent}</span> {'{'}<br/>
+                &nbsp;&nbsp;<span className="text-slate-400">// Building systems</span><br/>
                 {'}'}
               </div>
               
@@ -66,7 +66,7 @@ const Home = () => {
                 <div className="ml-4 mt-2"><CodeKeyword>public static void</CodeKeyword> <CodeFunction>main</CodeFunction>(String[] args) {'{'}</div>
                 <div className="ml-8 text-slate-400">// Initialize the developer profile</div>
                 <div className="ml-8"><CodeClass>Developer</CodeClass> dev = <CodeKeyword>new</CodeKeyword> <CodeClass>Developer</CodeClass>(<CodeString>"{data.profile.name}"</CodeString>);</div>
-                <div className="ml-8">dev.setSkills(<CodeString>"Java"</CodeString>, <CodeString>"Spring Boot"</CodeString>, <CodeString>"AWS"</CodeString>);</div>
+                <div className="ml-8">dev.setSkills(<CodeString>"Java"</CodeString>, <CodeString>"Spring Boot"</CodeString>, <CodeString>"Docker"</CodeString>);</div>
                 <div className="ml-8">dev.setStatus(<CodeString>"READY_TO_BUILD"</CodeString>);</div>
                 
                 <div className="ml-8 mt-2">SpringApplication.run(Application.<CodeKeyword>class</CodeKeyword>, args);</div>

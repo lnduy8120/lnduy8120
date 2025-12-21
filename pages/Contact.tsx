@@ -55,7 +55,7 @@ const Contact = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
              {data.contact.social.map(social => (
-                <a key={social.name} href={social.href} className="group flex items-center justify-center gap-3 bg-[#1e1e1e] border border-[#333] hover:border-primary p-4 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(19,236,91,0.15)]">
+                <a key={social.name} target='blank' href={social.href} className="group flex items-center justify-center gap-3 bg-[#1e1e1e] border border-[#333] hover:border-primary p-4 rounded-lg transition-all duration-300 hover:shadow-[0_0_15px_rgba(19,236,91,0.15)]">
                    <Icon name={social.icon} className="text-white group-hover:text-primary transition-colors" />
                    <div className="flex flex-col">
                       <span className="text-white text-sm font-bold font-mono group-hover:text-primary">{social.name}</span>

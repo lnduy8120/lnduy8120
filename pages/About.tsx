@@ -18,7 +18,7 @@ const About = () => {
                 <div className="w-3 h-3 rounded-full bg-green-500"></div>
                 <span className="ml-2 text-xs text-gray-400 font-mono">profile_pic.png</span>
               </div>
-              <div className="flex-1 bg-cover bg-center" style={{ backgroundImage: 'url("https://picsum.photos/800/800?grayscale")' }}>
+              <div className="flex-1 bg-cover bg-center" style={{ backgroundImage: 'url("/lnduy8120/profile.jpg")' }}>
                 <div className="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
               </div>
             </div>
@@ -53,17 +53,16 @@ const About = () => {
                 <CodeKeyword>public class</CodeKeyword> <CodeFunction>TechStack</CodeFunction> {'{'}<br/>
                 &nbsp;&nbsp;<CodeComment>// Core Technologies</CodeComment><br/>
                 &nbsp;&nbsp;<CodeKeyword>private final</CodeKeyword> String[] <CodeFunction>languages</CodeFunction> = {'{'}<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;<CodeString>"Java 17+"</CodeString>, <CodeString>"Kotlin"</CodeString>, <CodeString>"SQL"</CodeString>, <CodeString>"Python"</CodeString><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;<CodeString>"Java 17+"</CodeString>, <CodeString>"Rust"</CodeString>, <CodeString>"SQL"</CodeString>, <CodeString>"JavaScript"</CodeString><br/>
                 &nbsp;&nbsp;{'}'};<br/><br/>
                 &nbsp;&nbsp;<CodeComment>// Frameworks & Libraries</CodeComment><br/>
                 &nbsp;&nbsp;<CodeKeyword>private final</CodeKeyword> String[] <CodeFunction>frameworks</CodeFunction> = {'{'}<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;<CodeString>"Spring Boot"</CodeString>, <CodeString>"Hibernate"</CodeString>, <CodeString>"Micronaut"</CodeString><br/>
+                &nbsp;&nbsp;&nbsp;&nbsp;<CodeString>"Spring Boot"</CodeString>, <CodeString>"Hibernate"</CodeString><br/>
                 &nbsp;&nbsp;{'}'};<br/><br/>
                 &nbsp;&nbsp;<CodeComment>// Infrastructure & DevOps</CodeComment><br/>
                 &nbsp;&nbsp;<CodeKeyword>public</CodeKeyword> <CodeKeyword>void</CodeKeyword> <CodeFunction>deploy</CodeFunction>() {'{'}<br/>
                 &nbsp;&nbsp;&nbsp;&nbsp;Docker.containerize();<br/>
                 &nbsp;&nbsp;&nbsp;&nbsp;Kubernetes.orchestrate();<br/>
-                &nbsp;&nbsp;&nbsp;&nbsp;AWS.scale();<br/>
                 &nbsp;&nbsp;{'}'}<br/>
                 {'}'}
              </div>
