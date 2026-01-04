@@ -30,4 +30,4 @@ I'm a backend specialist who views code as a craft. With over 3 years of experie
 
 ## Featured Projects
 1. **E-Commerce Microservices**: Scalable backend with Spring Cloud, Docker, K8s, Kafka.
-2. **Iot Systems**: JavaFX desktop app with reactive UI.
+2. **Iot Systems**: Hardware and web service.
